@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WATER PORTAL</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='assets/bootstrap/css/bootstrap.min.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='assets/bootstrap/fonts/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>-->
+	<style>
+		.site-footer h5{
+  		color:inherit;
+  		font-size: 20 px;
+  		text-align:center;
+		}
+	</style>
+	
+</head>
+
+<body>
+    <!--<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header"><a class="navbar-brand navbar-link">Gas Booking Portal</a>
+            <button data-toggle="collapse" data-target="#navcol-1" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+        </div>
+        <div class="collapse navbar-collapse" id="navcol-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" class="active"><a href="indexxxx.html"><i class="fa fa-home"></i> Home </a></li>
+                <li role="presentation"><a href="C:\DBMS Project\new\register.html"><i class="fa fa-pencil"></i> Register</a></li>
+				<li role="presentation"><a href="C:\DBMS Project\new\proj4.html" ><i class="fa fa-user"></i> Log-In</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>-->
+            <!--div class="carousel-inner" role="listbox">-->
+			<nav>
+    
+				<div class="menu">
+				  
+					<a class="logo"><span>Water</span> Portal</a>
+				
+				  <ul>
+					<li><a href="{{ url_for('home1') }}">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="{{ url_for('signup') }}">Signup</a></li>
+					<li><a href="{{ url_for('contact') }}">Contact</a></li>
+					<li><a href="{{ url_for('loginp') }}">Login</a></li>
+				  </ul>
+				</div>
+			  </nav>
+			<section class="inner-banner-new">
+				<div class="container-fluid">
+				  <div class="row">
+					<div class="inner-banner-container">
+					</div>
+					<img src="{{ url_for('static', filename='assets/images/water1.jpg') }}"
+					class="img-fluid"/>
+					<div class="center">
+						<div class="title">Water Quality Prediction</div>
+					<!---	<div class="sub_title">Predict</div> -->
+						<div class="btns" >
+						  
+						 <a href="{{ url_for('static', filename='new/login.html') }}"> <button>Predict</button></a>
+						</div>
+				  </div>
+				</div>
+			  </section>
+               <!-- <div class="item active"><img style=" margin: 0 auto;" src="assets/img/4.jpg" alt="Image"></div>-->
+				
+            </div>
+				
+        </div>
+    <section class="testimonials">
+        <h2 class="text-center">Measurements for Safe Water - Do’s & Don’ts</h2>
+		<div class="container ">
+				<div class="row" id='box'>
+					<div class="col-md-6">
+						<div class="row">
+							<div class="col-md-12" style="text-align:center">
+								<u><h3><span class="glyphicon glyphicon-ok text-success"></span> DO'S</h3></u>
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-md-3">
+								<img class="bg-success"  style="margin-left: 100px; margin-top: 10px; margin-left: 100px; margin-top: 10px; width:20px;height:20px" "  />
+							</div>
+							<div class="col-md-9">
+								<h4>Reuse of water whenever possible</h3>
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-md-3">
+								<img class="bg-success" style="margin-left: 100px; margin-top: 10px; width:20px;height:20px" " />
+							</div>
+							<div class="col-md-9">
+								<h4>Use Sprinkler for irrigation</h3>
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-md-3">
+								<img class="bg-success" style="margin-left: 100px; margin-top: 10px; width:20px;height:20px" " />
+							</div>
+							<div class="col-md-9">
+								<h4>Use scientific method of application fertilizers</h3>
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-md-3">
+								<img class="bg-success" style="margin-left: 100px; margin-top: 10px; width:20px;height:20px" "  />
+							</div>
+							<div class="col-md-9">
+								<h4>Fix leaks properly</h3>
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-md-3">
+								<img class="bg-success" style="margin-left: 100px; margin-top: 10px; width:20px;height:20px" " />
+							</div>
+							<div class="col-md-9">
+								<h4>Install low-flow shower heads</h3>
+							</div>
+						</div>
+						<br>
+					</div>
+					<div class="col-md-6">
+						<div class="row">
+							<div class="col-md-12" style="text-align:center">
+								<u><h3><span class="glyphicon glyphicon-remove text-danger"></span> DON'T</h3></u>
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-md-3">
+								<img class="bg-danger" style="margin-left: 100px; margin-top: 10px; width:20px;height:20px" "  />
+							</div>
+							<div class="col-md-9">
+								<h4>Don't keep tap running while having bath, brushing teeth, washing dishes</h3>
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-md-3">
+								<img class="bg-danger" style="margin-left: 100px; margin-top: 10px; width:20px;height:20px" " />
+							</div>
+							<div class="col-md-9">
+								<h4>Avoid throw dead bodies in a river</h3>
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-md-3">
+								<img class="bg-danger" style="margin-left: 100px; margin-top: 10px; width:20px;height:20px" " />
+							</div>
+							<div class="col-md-9">
+								<h4>Don't wash clothes and kitchen utensils in water bodies </h3>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-3">
+								<img class="bg-danger" style="margin-left: 100px; margin-top: 10px; width:20px;height:20px" " />
+							</div>
+							<div class="col-md-9">
+								<h4>Never dump anything to the water bodies</h3>
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-md-3">
+								<img class="bg-danger" style="margin-left: 100px; margin-top: 10px; width:20px;height:20px" "  />
+							</div>
+							<div class="col-md-9">
+								<h4>Avoid use of pesticides</h3>
+							</div>
+						</div>
+						<br>
+					</div>
+				</div>
+		</div>
+		
+    </section>
+    <section class="features" id="about">
+        <div class="container">
+            <div class="row">
+                
+               
+					<!--<br>
+					<div id="about" style="width:100%;height:margin-left: 100px; margin-top: 10px; width:20px;height:20px" 0px;border-radius:5px"></div>-->
+					<h>About us</h>
+					<p>This system will uses the Machine Learning technology to predict the quality of the water. Diffrent places water quality can be predicted using various water properties and these details can be viewed from the admin panel. It uses properties such as PH, Hardness, Solids, Chloramines, Sulfate, Conducticity, Organic Carbon, Trihalomethanes, Turbidity to measure water quality.  </p>
+
+					
+                
+            </div>
+        </div>
+    </section>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <!-- <div class="col-sm-6"> -->
+                    <h5 class="text-center">Copyright © PROJECT_22-23_14_47_61_67</h5>
+			</div>
+        </div>
+    </footer>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

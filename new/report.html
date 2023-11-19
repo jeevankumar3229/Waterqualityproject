@@ -1,0 +1,77 @@
+<!Doctype HTML>
+<html>
+<head>
+ 
+	<title>Dashboard</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/dashstyle.css') }}" type="text/css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+<style>
+  body{
+    overflow-y: scroll;
+    color: rgb(250, 218, 8);
+    font-weight: bolder;
+    
+  }
+  .container{
+  }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+
+
+<body>
+	
+	<div id="mySidenav" class="sidenav">
+	<p class="logo"><span>Water</span> Portal</p>
+  <a href="{{ url_for('resultp') }}" class="icon-a"><i class="fa fa-dashboard icons"></i> &nbsp;&nbsp;Predict</a>
+  <a href="{{ url_for('predictp') }}" class="icon-a"><i class="fa fa-question-circle-o"></i> &nbsp;&nbsp;Predict-Live</a>
+  <a href="{{ url_for('reportp') }}" class="icon-a"><i class="fa fa-bars icons"></i> &nbsp;&nbsp;Report</a>
+  <a href="{{ url_for('logout') }}" class="icon-a"><i class="fa fa-user"></i>&nbsp;&nbsp; Logout</a>
+</div>
+<div class="main">
+  <div id="main">
+    <div class="head">
+      
+         <table border="1">
+        <tr style="background-color: rgb(183, 124, 48);">
+            <th>PH</th>
+            <th>Solids</th>
+            <th>Turbidity</th>
+            <th>Temperature</th>
+            <th>Conductivity</th>
+            <th>Hardness</th>
+            <th>Chloramines</th>
+            <th>Sulfate</th>
+            <th>Organic Carbon</th>
+            <th>Result</th>
+            <th>Quality Level</th>
+        </tr>
+        {% for row in data %}
+        <tr style="background-color: rgb(47, 30, 10);">
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[3] }}</td>
+            <td>{{ row[4] }}</td>
+            <td>{{ row[5] }}</td>
+            <td>{{ row[6] }}</td>
+            <td>{{ row[7] }}</td>
+            <td>{{ row[8] }}</td>
+            <td>{{ row[9] }}</td>
+            <td>{{ row[10] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+        
+
+  </div>
+    
+  
+  </div>
+</div>
+</body>
+
+
+</html>

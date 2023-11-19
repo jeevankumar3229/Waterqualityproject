@@ -1,0 +1,118 @@
+<!Doctype HTML>
+<html>
+<head>
+ 
+	<title>Dashboard</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/dashstyle.css') }}" type="text/css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+<style>
+  body{
+    overflow-y: scroll;
+    color: rgb(250, 218, 8);
+    font-weight: bolder;
+    
+  }
+  .container{
+  }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+
+
+<body>
+	
+	<div id="mySidenav" class="sidenav">
+	<p class="logo"><span>Water</span> Portal</p>
+  <a href="{{ url_for('resultp') }}" class="icon-a"><i class="fa fa-dashboard icons"></i> &nbsp;&nbsp;Predict</a>
+  <a href="{{ url_for('predictp') }}" class="icon-a"><i class="fa fa-question-circle-o"></i> &nbsp;&nbsp;Predict-Live</a>
+ <!--- <a href="{{ url_for('reportp') }}" class="icon-a"><i class="fa fa-bars icons"></i> &nbsp;&nbsp;Report</a> -->
+  <a href="{{ url_for('logout') }}" class="icon-a"><i class="fa fa-user"></i>&nbsp;&nbsp; Logout</a>
+</div>
+<div class="main">
+  <div id="main">
+    <div class="head">
+      <div class="col-div-12">
+        <center>
+  <span style="font-size:30px; font-weight:bold;cursor:pointer; color: white;"> Predict the water quality by providing essential details</span>
+</center>  
+</div>
+    
+    <div class="col-div-6">
+    
+  </div>
+    <div class="clearfix"></div>
+  </div>
+  
+    <div class="clearfix"></div>
+    <br/>
+    <center>
+      <div class="formstyle">
+        <form id="prediction-form" action="/predict" method="post">
+          
+          <label for="PH">PH:</label>
+          <br>
+          <input type="text" id="PH" name="PH" required><br>
+  
+          <label for="Hardness">Hardness:</label>
+          <br>
+          <input type="text" id="Hardness" name="Hardness" required><br>
+  
+          <label for="Solids">Solids:</label>
+          <br>
+          <input type="text" id="Solids" name="Solids" required><br>
+  
+          <label for="Chloramines">Chloramines:</label>
+          <br>
+          <input type="text" id="Chloramines" name="Chloramines" required><br>
+  
+          <label for="Sulfate">Sulfate:</label>
+          <br>
+          <input type="text" id="Sulfate" name="Sulfate" required><br>
+  
+          <label for="Conductivity">Conductivity:</label>
+          <br>
+          <input type="text" id="Conductivity" name="Conductivity" required><br>
+  
+          <label for="OrganicCarbon">Organic Carbon:</label>
+          <br>
+          <input type="text" id="OrganicCarbon" name="OrganicCarbon" required><br>
+  
+          <label for="Temperature">Temperature:</label>
+          <br>
+          <input type="text" id="Temperature" name="Temperature" required><br>
+  
+          <label for="Turbidity">Turbidity:</label>
+          <br>
+          <input type="text" id="Turbidity" name="Turbidity" required><br>
+  
+          <button style="color: brown; font-weight: bolder; margin-top: 20px;" type="submit" id="submit-btn">Submit</button>
+      </form>
+      <br>
+      
+      {% if prediction %}
+      <div>
+           {{ prediction }}
+      </div>
+      {% endif %}
+      <br>
+   <!---   {% if prediction_lr %}
+      <div>
+           </label>  {{ prediction_lr }}
+      </div>
+      {% endif %} -->
+        </div>
+        <script src="../javascript/script1.js"></script> 
+
+</div>   
+
+  </div>
+    
+  
+  </div>
+</div>
+</body>
+
+
+</html>

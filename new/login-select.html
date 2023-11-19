@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+  <title>Gas Book</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/login-select.css') }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     
+     <style>
+       
+       .btns button:last-child{
+                background: rgb(252, 55, 170);
+              color: rgb(14, 13, 13);
+          }
+     .btns button{
+      height: 35px;
+      width: 80px;
+      border-radius: 5px;
+      border: none;
+      margin: 0 10px;
+      border: 2px solid white;
+      font-size: 20px;
+      /* font-weight: bold; */
+      padding: 0 10px;
+      cursor: pointer;
+      outline: none;
+      transition: all 0.3s ease;
+      position: absolute;
+      top:10px;
+      right: 10px;
+     }
+      
+    </style>
+  </head>
+  <body>
+    <div class="btns">
+      <a href="home.html"><button>Home</button> </a>
+      </div>
+    <div class="container">
+      <div class="title">Login</div>
+      
+       <a href="{{ url_for('static', filename='new/login_user.html') }}"> <button type="submit" style="font-size: medium;font-weight: bold;">USER</button></a>
+       
+       <a href="{{ url_for('static', filename='new/login.html') }}"> <button type="submit" style="font-size: medium;font-weight: bold;">ADMIN</button></a>
+
+
+        
+    </div>
+  </body>
+</html>
+
